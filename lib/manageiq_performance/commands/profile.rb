@@ -59,7 +59,8 @@ module ManageIQPerformance
 
       def debug_wrapper_script
         @run_wrapper.rewind
-        puts "# Output file:  #{@run_wrapper.path}..."
+        puts "# Outout: #{@output == STDOUT ? "STDOUT" : @opt[:output_file]}"
+        puts "# Wrapper file:  #{@run_wrapper.path}..."
         puts "# CMD:  #{command}"
         puts "#"
         puts "# --------------------"
